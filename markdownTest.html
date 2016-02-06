@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Marked in the browser</title>
+  <script src="lib/marked.js"></script>
+  <link rel="stylesheet" href="css/test.css">
+</head>
+   <nav>
+      <ul>
+          <li>SUMD</li>
+          <li>H1</li>
+          <li>LINK</li>
+          <li>IMG</li>
+          <li>中文　</li>
+          <li>GitHub</li>
+      </ul>
+  </nav>
+  <textarea id="editor"></textarea>
+  <div id="content"></div>
+
+  <!-- <script> marked**.');
+  </script> -->
+  <script type="text/javascript">
+//   require(["lib/marked"],function(marked) {
+//     var marked = require('marked');
+//     marked.setOptions({
+//         renderer: new marked.Renderer(),
+//         gfm: true,
+//         tables: true,
+//         breaks: false,
+//         pedantic: false,
+//         sanitize: true,
+//         smartLists: true,
+//         smartypants: false
+//     });
+
+// console.log(marked('# I am using __markdown__.'));
+//   })
+    var editor = document.getElementById("editor")
+    editor.oninput = function(e) {
+      document.getElementById("content").innerHTML = marked(editor.value);
+    };
+    //  EventListener ：  keyboard ： onkeydown onkeyup onkeypress
+    //  oninput ：
+
+  </script>
+</body>
+</html>
