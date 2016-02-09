@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/vue-css.css">
+	<link rel="stylesheet" type="text/css" href="css/prism.css">
+	<script src="lib/vue.js"></script>
+	<script src="lib/marked.js"></script>
+	<script src="lib/prism.js"></script>
+</head>
+<body>
+	<div id="editor">
+  		<textarea v-model="input" debounce="400"></textarea>
+  		<div v-html="input | marked"></div>
+	</div>
+	<script>
+	marked.setOptions({
+		renderer: new marked.Renderer(),
+		gfm: true,
+		tables: true,
+		breaks: false,
+		pedantic: false,
+		sanitize: true,
+		smartLists: true,
+		smartypants: false
+	});
+	console.log("marked")
+	new Vue({
+		el: '#editor',
+		data: {
+			input: '# hello'
+		},
+		filters: {
+			marked: marked
+		}
+	})
+	</script>
+</body>
+</html>

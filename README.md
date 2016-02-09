@@ -7,7 +7,8 @@ It's called L.  my special markdown editor.
 - basic:
 		basic MD function
 		material design UI
-		drop ang drag img
+		drop ang drag img | support QiNiu storage
+		sync scroll
 		custom css
 		custom js
 		table of content
@@ -16,6 +17,7 @@ It's called L.  my special markdown editor.
 		maybe with MindMap
 		github API
 		use toke and browser storage
+		引入图片裁剪，甚至slider
 		how to say: firstly finishing what i need to finish article.
 
 - more:
